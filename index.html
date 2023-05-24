@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="gwdpage_style.css" rel="stylesheet" data-version="13" data-exports-type="gwd-page">
   <link href="gwdpagedeck_style.css" rel="stylesheet" data-version="14" data-exports-type="gwd-pagedeck">
+  <link href="gwdimage_style.css" rel="stylesheet" data-version="17" data-exports-type="gwd-image">
   <style id="gwd-lightbox-style">
     .gwd-lightbox {
       overflow: hidden;
@@ -67,20 +68,49 @@
     }
     .gwd-p-rfb4 {
       position: absolute;
-      left: 15px;
-      top: 17px;
+      left: 21px;
+      top: 96px;
+    }
+    .gwd-image-125o {
+      position: absolute;
+      width: 104px;
+      height: 67px;
+      transform-origin: 50% 50% 0px;
+      left: 12px;
+      top: 10px;
     }
   </style>
   <script data-source="gwd_webcomponents_v1_min.js" data-version="2" data-exports-type="gwd_webcomponents_v1" src="gwd_webcomponents_v1_min.js"></script>
   <script data-source="gwdpage_min.js" data-version="13" data-exports-type="gwd-page" src="gwdpage_min.js"></script>
   <script data-source="gwdpagedeck_min.js" data-version="14" data-exports-type="gwd-pagedeck" src="gwdpagedeck_min.js"></script>
+  <script data-source="gwdimage_min.js" data-version="17" data-exports-type="gwd-image" src="gwdimage_min.js"></script>
+  <script type="text/javascript" gwd-events="support" src="gwd-events-support.1.0.js"></script>
+  <script type="text/javascript" gwd-events="handlers">
+    gwd.auto_LogoClick = function(event) {
+      // GWD Predefined Function
+      gwd.actions.gwdPagedeck.goToPage('pagedeck', 'page1', 'none', 1000, 'linear', 'top');
+    };
+  </script>
+  <script type="text/javascript" gwd-events="registration">
+    // Google Web Designer의 이벤트 처리를 위한 지원 코드
+    // 이 스크립트 블록은 자동 생성된 것이므로 수정하지 마세요.
+    gwd.actions.events.registerEventHandlers = function(event) {
+      gwd.actions.events.addHandler('logo', 'click', gwd.auto_LogoClick, false);
+    };
+    gwd.actions.events.deregisterEventHandlers = function(event) {
+      gwd.actions.events.removeHandler('logo', 'click', gwd.auto_LogoClick, false);
+    };
+    document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
+    document.addEventListener("unload", gwd.actions.events.deregisterEventHandlers);
+  </script>
 </head>
 
 <body class="document-body">
   <gwd-pagedeck class="gwd-page-container" id="pagedeck">
-    <gwd-page id="page1" class="gwd-page-wrapper page1-content gwd-lightbox gwd-page-z90z" data-gwd-width="720px" data-gwd-height="480px">
+    <gwd-page id="page1" class="gwd-page-wrapper page1-content gwd-lightbox gwd-page-z90z" data-gwd-width="720px" data-gwd-height="480px" data-gwd-name="index">
       <div class="gwd-page-content page1-content gwd-div-9mvf">
         <p class="gwd-p-rfb4">Hello, World!</p>
+        <gwd-image id="logo" source="assets/logo.png" scaling="stretch" class="gwd-image-125o"></gwd-image>
       </div>
     </gwd-page>
   </gwd-pagedeck>
