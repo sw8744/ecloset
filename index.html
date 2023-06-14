@@ -2282,6 +2282,14 @@
       // GWD Predefined Function
       gwd.actions.gwdPagedeck.goToPage('pagedeck', 'page1', 'none', 1000, 'linear', 'top');
     };
+    gwd.auto_Allbirds_logo_3Click = function(event) {
+      // GWD Predefined Function
+      gwd.actions.gwdPagedeck.goToPage('pagedeck', 'page1_3', 'none', 1000, 'linear', 'top');
+    };
+    gwd.auto_Allbirds_logo_4Click = function(event) {
+      // GWD Predefined Function
+      gwd.actions.gwdPagedeck.goToPage('pagedeck', 'page1_3', 'none', 1000, 'linear', 'top');
+    };
   </script>
   <script type="text/javascript" gwd-events="registration">
     // Google Web Designer의 이벤트 처리를 위한 지원 코드
@@ -2373,6 +2381,8 @@
       gwd.actions.events.addHandler('logo_16', 'click', gwd.auto_Logo_16Click, false);
       gwd.actions.events.addHandler('logo_18', 'click', gwd.auto_Logo_18Click, false);
       gwd.actions.events.addHandler('logo_19', 'click', gwd.auto_Logo_19Click, false);
+      gwd.actions.events.addHandler('allbirds_logo_3', 'click', gwd.auto_Allbirds_logo_3Click, false);
+      gwd.actions.events.addHandler('allbirds_logo_4', 'click', gwd.auto_Allbirds_logo_4Click, false);
     };
     gwd.actions.events.deregisterEventHandlers = function(event) {
       gwd.actions.events.removeHandler('logo', 'click', gwd.auto_LogoClick, false);
@@ -2461,6 +2471,8 @@
       gwd.actions.events.removeHandler('logo_16', 'click', gwd.auto_Logo_16Click, false);
       gwd.actions.events.removeHandler('logo_18', 'click', gwd.auto_Logo_18Click, false);
       gwd.actions.events.removeHandler('logo_19', 'click', gwd.auto_Logo_19Click, false);
+      gwd.actions.events.removeHandler('allbirds_logo_3', 'click', gwd.auto_Allbirds_logo_3Click, false);
+      gwd.actions.events.removeHandler('allbirds_logo_4', 'click', gwd.auto_Allbirds_logo_4Click, false);
     };
     document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
     document.addEventListener("unload", gwd.actions.events.deregisterEventHandlers);
